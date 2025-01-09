@@ -2,3 +2,4 @@
 /venv
 /news-clean.csv
 /2-epochs.pt
+/__pycache__

@@ -9,8 +9,7 @@
 - Generally related to **world news/politics**
 - **Preprocessing** ([EDA.ipynb](EDA.ipynb)): Most real articles included a **dateline** at the beginning (e.g. BUCHAREST (Reuters)), which I chose to parse out of each because it is not really an indicator of an article's credibility and could be incorrectly interpreted by the model as such. I wanted the model to be able to generalize for articles outside the dataset, and not just label every article with a dateline as true.
 
-<img src="images/true-wordcloud.png" width="49%">
-<img src="images/fake-wordcloud.png" width="49%">
+<img src="images/true-wordcloud.png" width="49%"> <img src="images/fake-wordcloud.png" width="49%">
 Word cloud visualizations of the true and fake article corpus, respectively.
 
 ## Model Development & Training
@@ -28,8 +27,7 @@ Word cloud visualizations of the true and fake article corpus, respectively.
 - **Loss function:** CrossEntropyLoss — measures difference between predicted probabilities of each class and true labels, penalizing incorrect predictions and "low-confidence" predictions more heavily
 - To enable this model to be easily tested on new news articles, I deployed it in a web app interface using the Flask web framework. "Confidence" is given by the model's softmax probability for the predicted class. 
 
-<img src="images/screenshot1.png" width="49%">
-<img src="images/screenshot2.png" width="49%">
+<img src="images/screenshot1.png" width="49%"> <img src="images/screenshot2.png" width="49%">
 
 ## Installation
 ```bash

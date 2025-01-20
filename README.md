@@ -25,7 +25,7 @@ Word cloud visualizations of the true and fake article corpus, respectively.
 - When initially trained for 4 epochs with a 90/10 training/validation split, the model's performance did not improve over the course of training, and testing showed that all text was being classified as real with a low softmax probability. This was also reflected by the validation accuracy during training, which aligned with the proportion of real articles in the combined dataset (48%).
 - When trained with an 80/20 split, the model had 100% accuracy and ~0 loss within one epoch across training and validation data. This is excellent, but odd, and makes me think that the model has associated certain topics with fake news and others with real news (see [Dataset Limitations](#dataset-limitations)). Additionally, the learning rate could also be adjusted and potentially "warmed up". 
 - **Loss function:** CrossEntropyLoss — measures difference between predicted probabilities of each class and true labels, penalizing incorrect predictions and "low-confidence" predictions more heavily
-- To enable this model to be easily tested on new news articles, I deployed it in a web app interface using the Flask web framework. "Confidence" is given by the model's softmax probability for the predicted class. 
+- To enable this model to be easily used to determine if news articles are true, I deployed it in a web app interface using the Flask web framework. "Confidence" is given by the model's softmax probability for the predicted class. 
 
 <img src="images/screenshot1.png" width="49%"> <img src="images/screenshot2.png" width="49%">
 
